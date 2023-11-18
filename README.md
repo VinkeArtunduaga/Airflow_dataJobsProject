@@ -43,10 +43,15 @@ Antes de comenzar asegurate de tener instalados los isguientes componentes:
 3. Corra las imagenes de kafka y de postgres mediante
    ```bash
    sudo docker compose up -d
-4. Correr el kafka consumer mediante
+4. Entrar al contenedor de kafka y crear el topic con los siguientes comandos
+   ```bash
+   sudo docker exec -it kafka-test bash
+   kafka-topics --bootstrap-server kafka-test:9092 --create --topic project
+   kafka-console-consumer --bootstrap-server kafka-test:9092 --topic project --from-beginning
+5. Correr el kafka consumer mediante
    ```bash
    python3 kafka_consumer.py
-5. Luego correr airflow mediante
+6. Luego correr airflow mediante
    ```bash
    airflow standalone
-6. En caso de querer hacer ista de el dashboard en real time, crear las api con la estructura de datos especificada en el documento y conseguir el link de la api en caso de requerir mas informacion mirar el siguiente link [tutorial de power bi con kafka](https://desarrollopowerbi.com/dashboard-en-tiempo-real-con-apacha-kafka-python-y-power-bi/).
+7. En caso de querer hacer ista de el dashboard en real time, crear las api con la estructura de datos especificada en el documento y conseguir el link de la api en caso de requerir mas informacion mirar el siguiente link [tutorial de power bi con kafka](https://desarrollopowerbi.com/dashboard-en-tiempo-real-con-apacha-kafka-python-y-power-bi/).
