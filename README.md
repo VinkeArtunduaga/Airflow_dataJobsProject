@@ -38,7 +38,7 @@ Antes de comenzar asegurate de tener instalados los isguientes componentes:
 
 1. Clone el repositorio con el siguiente comando
    ```bash
-   git clone
+   git clone https://github.com/VinkeArtunduaga/Airflow_dataJobsProject.git
 2. Asegurate de que cumples con los requisitos anteriores.
 3. Corra las imagenes de kafka y de postgres mediante
    ```bash
